@@ -19,24 +19,20 @@ function AddNotes({ navigation,route }) {
 
     return (
         <>
-        <View>
-            <Text>
-                hello {route.name}
-            </Text>
-        </View>
-            <IconButton
+            {/* <IconButton
                 icon="close"
                 size={25}
-                color='white'
+                color='blue'
                 onPress={() => navigation.goBack()}
                 style={styles.iconButton}
-            />
+            /> */}
 
             <View style={styles.container}>
                 <TextInput
-                    label="Add Note Title here"
+                    label="Note Title"
                     value={noteTitle}
                     mode='outlined'
+                    theme={{ colors: { placeholder: 'black', text: 'black', primary: 'black',underlineColor:'black'}}}
                     onChangeText={setNoteTitle}
                     style={styles.title}
                 />
@@ -44,12 +40,13 @@ function AddNotes({ navigation,route }) {
                     label="Add Note Description"
                     value={noteDescription}
                     onChangeText={setNoteDescription}
-                    mode="flat"
+                    mode="outlined"
                     multiline={true}
                     style={styles.text}
                     scrollEnabled={true}
                     returnKeyLabel='done'
                     blurOnSubmit={true}
+                    theme={{ colors: { placeholder: 'black', text: 'black', primary: 'black',underlineColor:'black'}}}
                 />
                 <FAB
                     style={styles.fab}
@@ -84,14 +81,17 @@ const styles = StyleSheet.create({
         flex: 1
     },
     title: {
-        backgroundColor: "#ADD8E6",
+        height: 75,
+        backgroundColor: "#FDF074",
         fontSize: 24,
-        marginBottom: 16
+        marginBottom: 16,
+        fontWeight: "bold"
     },
     text: {
-        backgroundColor: "#FDF074",
-        height: 300,
-        fontSize: 16
+        backgroundColor: "#ADD8E6",
+        height: 600,
+        fontSize: 16,
+        fontWeight: "bold"
     },
     fab: {
         position: 'absolute',

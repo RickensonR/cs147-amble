@@ -25,6 +25,7 @@ export default function ViewNotes({navigation}){
                             data={notes}
                             renderItem={({ item }) => (
                                 <List.Item
+                                left={props => <List.Icon {...props} icon="notebook-outline" />}
                                     title={item.noteTitle}
                                     description={item.noteDescription}
                                     descriptionNumberOfLines={1}
