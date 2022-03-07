@@ -23,7 +23,7 @@ export default function discoverStack() {
       <DiscoverStack.Navigator>
       <DiscoverStack.Screen name="Profile" component={Info} options = {({navigation}) => {
         return {
-          headerTitle: ()=> <Header navigation = {navigation}/>
+         headerTitle: ()=> <Header navigation = {navigation}/>
         }
 
       }

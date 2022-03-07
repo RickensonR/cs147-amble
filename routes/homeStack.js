@@ -6,6 +6,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/Home'; 
 import Paint from '../screens/Paint'; 
 import Header from '../shared/header';
+import Supplies from '../screens/Supplies';
+import Tutorials from '../screens/Tutorials';
+
 import react from 'react';
 
 const HomeStack = createNativeStackNavigator();
@@ -35,6 +38,8 @@ export default function homeStack() {
       } />
       
       <HomeStack.Screen name="Paint" component={Paint}  />
+      <HomeStack.Screen name="Supplies" component={Supplies}  />
+      <HomeStack.Screen name="Tutorials" component={Tutorials}  />
     </HomeStack.Navigator>
   );
   }

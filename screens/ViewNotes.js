@@ -21,18 +21,24 @@ export default function ViewNotes({navigation}){
               </View>
 
             ):(
-                <FlatList
+                <FlatList 
+
                             data={notes}
                             renderItem={({ item }) => (
                                 <List.Item
-                                left={props => <List.Icon {...props} icon="notebook-outline" />}
+                                    left={props => <List.Icon {...props} icon="lead-pencil" color = "black" />}
                                     title={item.noteTitle}
                                     description={item.noteDescription}
                                     descriptionNumberOfLines={1}
                                     titleStyle={styles.listTitle}
                                     onPress = {()=> deleteNote(item.id)}
+                                    style = {styles.noteStyle}
+                                    theme={{ colors: {text: 'black', primary: 'black',underlineColor:'black'}}}
+                                   
+                                    
                                 />
                             )}
+                            
                             keyExtractor={item => item.id.toString()}
                         />
 
@@ -88,7 +94,20 @@ const styles = StyleSheet.create({
     },
     listTitle: {
         fontSize: 20
-    }
+    },
+    noteStyle: {
+            borderWidth:1,
+            borderColor:'rgba(0,0,0,0.2)',
+            alignItems:'center',
+            justifyContent:'center',
+            width:"100%",
+            height:75,
+            backgroundColor:'#ADD8E6',
+            borderRadius:10,
+            paddingVertical: 20,
+            paddingBottom:20,
+            marginBottom: 18,
+          }
 
 })
 
