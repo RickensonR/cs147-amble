@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Info from '../screens/Info';
 import Header from '../shared/header';
 
-const ProfileStack = createNativeStackNavigator();
+const PStack = createNativeStackNavigator();
 
 // const screens = {
 //     Home: {
@@ -18,10 +18,10 @@ const ProfileStack = createNativeStackNavigator();
 // }
 
 
-export default function profileStack() {
+export default function ProfileStack() {
     return (
-      <ProfileStack.Navigator>
-      <ProfileStack.Screen name="Profile" component={Info} options = {({navigation}) => {
+      <PStack.Navigator>
+      <PStack.Screen name="Profile" component={Info} options = {({navigation}) => {
         return {
           headerTitle: ()=> <Header navigation = {navigation}/>
         }
@@ -30,7 +30,7 @@ export default function profileStack() {
       
       
       } />
-      </ProfileStack.Navigator>
+      </PStack.Navigator>
       
     );
   }

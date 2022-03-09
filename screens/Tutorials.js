@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 
 function Tutorials(props) {
   return (
+    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}>
     <View style={styles.container}>
       <View style={styles.rect6}>
         <View style={styles.modules6Row}>
@@ -22,28 +23,28 @@ function Tutorials(props) {
               style={styles.button3}
             ></TouchableOpacity>
           </TouchableOpacity>
-          <Text style={styles.back1}>Back</Text>
-          <EntypoIcon name="chevron-left" style={styles.icon1}></EntypoIcon>
+          {/* { <Text style={styles.back1}>Back</Text> }
+          { <EntypoIcon name="chevron-left" style={styles.icon1}></EntypoIcon> } */}
         </View>
         <Text style={styles.tutorials}>tutorials</Text>
       </View>
       <View style={styles.icon2StackStack}>
         <View style={styles.icon2Stack}>
-          <EntypoIcon name="menu" style={styles.icon2}></EntypoIcon>
-          <TouchableOpacity
+          {/* <EntypoIcon name="menu" style={styles.icon2}></EntypoIcon> */}
+          {/* <TouchableOpacity
             onPress={() => props.navigation.navigate("Untitled1")}
             style={styles.button2}
-          ></TouchableOpacity>
-          <View style={styles.rect1}>
+          ></TouchableOpacity> */}
+          <View >
             <View style={styles.icon5Row}>
-              <EntypoIcon name="menu" style={styles.icon5}></EntypoIcon>
-              <Text style={styles.amble2}>amble</Text>
-              <EntypoIcon name="home" style={styles.icon4}></EntypoIcon>
+              {/* <EntypoIcon name="menu" style={styles.icon5}></EntypoIcon> */}
+              {/* <Text style={styles.amble2}>amble</Text> */}
+              {/* <EntypoIcon name="home" style={styles.icon4}></EntypoIcon> */}
             </View>
           </View>
         </View>
-        <EntypoIcon name="home" style={styles.icon3}></EntypoIcon>
-        <Text style={styles.amble1}>amble</Text>
+        {/* <EntypoIcon name="home" style={styles.icon3}></EntypoIcon> */}
+        {/* <Text style={styles.amble1}>amble</Text> */}
       </View>
       <View style={styles.rect3}>
         <View style={styles.modules3Row}>
@@ -65,6 +66,7 @@ function Tutorials(props) {
       </View>
       <Text style={styles.modules}>modules</Text>
     </View>
+    </ImageBackground>
   );
 }
 

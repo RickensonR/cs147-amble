@@ -8,7 +8,7 @@ import Header from '../shared/header';
 import ViewNotes from '../screens/ViewNotes';
 import AddNotes from '../screens/AddNotes';
 
-const InfoStack = createNativeStackNavigator();
+const IStack = createNativeStackNavigator();
 
 // const screens = {
 //     Home: {
@@ -20,10 +20,10 @@ const InfoStack = createNativeStackNavigator();
 // }
 
 
-export default function infoStack() {
+export default function InfoStack() {
     return (
-      <InfoStack.Navigator>
-      <InfoStack.Screen name="Info" component={Info} options = {({navigation}) => {
+      <IStack.Navigator>
+      <IStack.Screen name="Info" component={Info} options = {({navigation}) => {
         return {
           headerTitle: ()=> <Header navigation = {navigation}/>
         }
@@ -32,9 +32,9 @@ export default function infoStack() {
       
       
       } />
-      <InfoStack.Screen name = "ViewNotes" component={ViewNotes} />
-      <InfoStack.Screen name = "AddNotes" component={AddNotes} />
-      </InfoStack.Navigator>
+      <IStack.Screen name = "ViewNotes" component={ViewNotes} />
+      <IStack.Screen name = "AddNotes" component={AddNotes} />
+      </IStack.Navigator>
       
     );
   }

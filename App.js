@@ -17,6 +17,7 @@ const getFonts = () =>Font.loadAsync({
 
 
 export default function App() {
+  
   //var useState;
   const [fontsLoaded, setFontsLoaded] = useState(false); 
 

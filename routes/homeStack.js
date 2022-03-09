@@ -11,7 +11,7 @@ import Tutorials from '../screens/Tutorials';
 
 import react from 'react';
 
-const HomeStack = createNativeStackNavigator();
+const HStack = createNativeStackNavigator();
 
 // const screens = {
 //     Home: {
@@ -23,11 +23,11 @@ const HomeStack = createNativeStackNavigator();
 // }
 
 
-export default function homeStack() {
+export default function HomeStack() {
   return (
         
-    <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={Home} options = {({navigation}) => {
+    <HStack.Navigator>
+    <HStack.Screen name="Home" component={Home} options = {({navigation}) => {
         return {
           headerTitle: ()=> <Header navigation = {navigation}/>
         }
@@ -37,10 +37,10 @@ export default function homeStack() {
       
       } />
       
-      <HomeStack.Screen name="Paint" component={Paint}  />
-      <HomeStack.Screen name="Supplies" component={Supplies}  />
-      <HomeStack.Screen name="Tutorials" component={Tutorials}  />
-    </HomeStack.Navigator>
+      <HStack.Screen name="Paint" component={Paint}  />
+      <HStack.Screen name="Supplies" component={Supplies}  />
+      <HStack.Screen name="Tutorials" component={Tutorials}  />
+    </HStack.Navigator>
   );
   }
 

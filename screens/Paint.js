@@ -1,22 +1,23 @@
 import {globalStyles} from '../styles/global';
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text, ImageBackground } from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 function Paint(props) {
     return (
+    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
       <View style={styles.container}>
-        <View style={styles.button1Stack}>
+        {/* <View style={styles.button1Stack}>
           <TouchableOpacity
             onPress={() => props.navigation.goBack()}
             style={styles.button1}
           >
             <Text style={styles.back1}>Back</Text>
           </TouchableOpacity>
-          <EntypoIcon name="chevron-left" style={styles.icon1}></EntypoIcon>
-        </View>
-        <View style={styles.icon2StackStack}>
+          {<EntypoIcon name="chevron-left" style={styles.icon1}></EntypoIcon>}
+        </View> */}
+        {/* <View style={styles.icon2StackStack}>
           <View style={styles.icon2Stack}>
             <EntypoIcon name="menu" style={styles.icon2}></EntypoIcon>
             <TouchableOpacity
@@ -33,7 +34,7 @@ function Paint(props) {
           </View>
           <EntypoIcon name="home" style={styles.icon3}></EntypoIcon>
           <Text style={styles.amble1}>amble</Text>
-        </View>
+        </View> */}
         <View style={styles.icon6Row}>
           <FontAwesomeIcon
             name="paint-brush"
@@ -65,12 +66,17 @@ function Paint(props) {
           <Text style={styles.examples}>examples</Text>
         </TouchableOpacity>
       </View>
+    </ImageBackground>
     );
+
   }
   
   const styles = StyleSheet.create({
     container: {
-      flex: 1
+      flex: 1,
+      // backgroundColor: "#fff",
+      justifyContent: "center"
+      
     },
     button1: {
       top: 7,
@@ -195,7 +201,7 @@ function Paint(props) {
     icon6Row: {
       height: 37,
       flexDirection: "row",
-      marginTop: 41,
+      marginTop: 0,
       marginLeft: 130,
       marginRight: 130
     },

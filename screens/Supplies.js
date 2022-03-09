@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground} from "react-native";
 import EntypoIcon from "react-native-vector-icons/Entypo";
+// import { ImageBackground } from "react-native-web";
 import {globalStyles} from '../styles/global';
 
 function Supplies(props) {
   return (
-    <View style={styles.container}>
+    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
+  <View style={styles.container}>
       <View style={styles.rect13}>
         <View style={styles.rect11Row}>
           <View style={styles.rect11}></View>
@@ -43,9 +45,9 @@ function Supplies(props) {
       </View>
       <View style={styles.icon1StackStack}>
         <View style={styles.icon1Stack}>
-          <EntypoIcon name="menu" style={styles.icon1}></EntypoIcon>
-          <View style={styles.rect1}>
-            <View style={styles.button1StackRow}>
+          {/* <EntypoIcon name="menu" style={styles.icon1}></EntypoIcon> */}
+          {/* <View style={styles.rect1}>
+            {<View style={styles.button1StackRow}>
               <View style={styles.button1Stack}>
                 <TouchableOpacity
                   onPress={() => props.navigation.navigate("Untitled1")}
@@ -55,22 +57,22 @@ function Supplies(props) {
               </View>
               <Text style={styles.amble2}>amble</Text>
               <EntypoIcon name="home" style={styles.icon3}></EntypoIcon>
-            </View>
-          </View>
+            </View> }
+          </View> */}
         </View>
-        <Text style={styles.amble1}>amble</Text>
-        <EntypoIcon name="home" style={styles.icon2}></EntypoIcon>
+        {/* <Text style={styles.amble1}>amble</Text> */}
+        {/* <EntypoIcon name="home" style={styles.icon2}></EntypoIcon> */}
       </View>
       <View style={styles.icon5StackStackRow}>
         <View style={styles.icon5StackStack}>
           <View style={styles.icon5Stack}>
-            <EntypoIcon name="chevron-left" style={styles.icon5}></EntypoIcon>
-            <TouchableOpacity
+            {/* <EntypoIcon name="chevron-left" style={styles.icon5}></EntypoIcon> */}
+            {/* <TouchableOpacity
               onPress={() => props.navigation.goBack()}
               style={styles.button2}
-            ></TouchableOpacity>
+            ></TouchableOpacity> */}
           </View>
-          <Text style={styles.back1}>Back</Text>
+          {/* {<Text style={styles.back1}>Back</Text>} */}
         </View>
         <Text style={styles.text}>supplies</Text>
       </View>
@@ -84,6 +86,7 @@ function Supplies(props) {
       </View>
       <Text style={styles.whatWeRecommend}>what we recommend...</Text>
     </View>
+    </ImageBackground>
   );
 }
 
