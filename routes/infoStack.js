@@ -23,7 +23,7 @@ const IStack = createNativeStackNavigator();
 export default function InfoStack() {
     return (
       <IStack.Navigator>
-      <IStack.Screen name="Info" component={Info} options = {({navigation}) => {
+      <IStack.Screen name="Notes" component={Info} options = {({navigation}) => {
         return {
           headerTitle: ()=> <Header navigation = {navigation}/>
         }
