@@ -6,7 +6,7 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 function Paint(props) {
     return (
-    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
+    // <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
       <View style={styles.container}>
         {/* <View style={styles.button1Stack}>
           <TouchableOpacity
@@ -66,7 +66,7 @@ function Paint(props) {
           <Text style={styles.examples}>examples</Text>
         </TouchableOpacity>
       </View>
-    </ImageBackground>
+    // </ImageBackground>
     );
 
   }
@@ -74,7 +74,7 @@ function Paint(props) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      // backgroundColor: "#fff",
+      backgroundColor: "#fff",
       justifyContent: "center"
       
     },

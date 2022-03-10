@@ -3,10 +3,13 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Discover from '../screens/discover';
 import Info from '../screens/Info';
 import Header from '../shared/header';
+import ForYou from '../screens/ForYou';
 
-const DiscoverStack = createNativeStackNavigator();
+
+const DStack = createNativeStackNavigator();
 
 // const screens = {
 //     Home: {
@@ -18,10 +21,10 @@ const DiscoverStack = createNativeStackNavigator();
 // }
 
 
-export default function discoverStack() {
+export default function DiscoverStack() {
     return (
-      <DiscoverStack.Navigator>
-      <DiscoverStack.Screen name="Profile" component={Info} options = {({navigation}) => {
+      <DStack.Navigator>
+      <DStack.Screen name="Discover" component={Discover} options = {({navigation}) => {
         return {
          headerTitle: ()=> <Header navigation = {navigation}/>
         }
@@ -30,7 +33,8 @@ export default function discoverStack() {
       
       
       } />
-      </DiscoverStack.Navigator>
+      <DStack.Screen name="ForYou" component={ForYou} />
+      </DStack.Navigator>
       
     );
   }

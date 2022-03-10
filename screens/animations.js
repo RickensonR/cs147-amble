@@ -1,4 +1,4 @@
-import { Dimensions } from 'react-native';
+import { Dimensions} from 'react-native';
 import { getInputRangeFromIndexes } from 'react-native-snap-carousel'; // 3.7.2
 
 const SLIDER_WIDTH = Dimensions.get('window').width;

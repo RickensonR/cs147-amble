@@ -34,6 +34,7 @@ export default function InfoStack() {
       } />
       <IStack.Screen name = "ViewNotes" component={ViewNotes} />
       <IStack.Screen name = "AddNotes" component={AddNotes} />
+      
       </IStack.Navigator>
       
     );

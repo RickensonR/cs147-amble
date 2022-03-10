@@ -4,7 +4,7 @@ import EntypoIcon from "react-native-vector-icons/Entypo";
 
 function Tutorials(props) {
   return (
-    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}>
+    // <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}>
     <View style={styles.container}>
       <View style={styles.rect6}>
         <View style={styles.modules6Row}>
@@ -66,13 +66,14 @@ function Tutorials(props) {
       </View>
       <Text style={styles.modules}>modules</Text>
     </View>
-    </ImageBackground>
+    // </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#fff"
   },
   rect6: {
     width: 275,

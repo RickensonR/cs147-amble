@@ -8,17 +8,25 @@ import Navigator from './routes/drawer';
 import AppLoading from 'expo-app-loading';
 import {useState} from 'react';
 import 'react-native-gesture-handler';
+import { LogBox } from 'react-native-web';
 
 const getFonts = () =>Font.loadAsync({
   'nunito-sans-regular': require('./assets/fonts/NunitoSans-Regular.ttf'),
-  'nunito-sans-bold': require('./assets/fonts/NunitoSans-Bold.ttf')
+  'nunito-sans-bold': require('./assets/fonts/NunitoSans-Bold.ttf'),
+  'righteous-regular': require('./assets/fonts/Righteous-Regular.ttf'),
+  'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf')
+
 
 });
+
+LogBox.ignoreAllLogs();
 
 
 export default function App() {
   
   //var useState;
+
+  
   const [fontsLoaded, setFontsLoaded] = useState(false); 
 
   if (fontsLoaded){

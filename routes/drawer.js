@@ -5,7 +5,7 @@ import {IconButton} from "react-native-paper";
 import HomeStack from "./homeStack";
 import InfoStack from "./infoStack";
 import ProfileStack from "./profileStack";
-import discoverStack from "./discoverStack";
+import DiscoverStack from "./discoverStack";
 import {StyleSheet} from "react-native";
 
 const drawer = createDrawerNavigator();
@@ -36,7 +36,7 @@ export default function Navigator() {
                 icon="account"
                 size={25}
                 color='black'/>)}}/>
-        <drawer.Screen name="Discover" component={ProfileStack} options = {{drawerIcon: ({color}) => (<IconButton
+        <drawer.Screen name="Discover" component={DiscoverStack} options = {{drawerIcon: ({color}) => (<IconButton
                 icon="earth"
                 size={25}
                 color='black'/>)}} />

@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import {StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Dimensions } from 'react-native';
+import {StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Dimensions, ImageBackground } from 'react-native';
 import {globalStyles} from '../styles/global';
 import Carousel from 'react-native-snap-carousel';
 import { scrollInterpolator, animatedStyles } from './animations';
@@ -66,6 +66,7 @@ export default function Home({navigation}){
     const _renderItem = ({ item }) => {
         const IconComponent = components[item.source];
         return (
+
           <TouchableOpacity onPress = {() => navigation.navigate('Paint',item )} style={styles.itemContainer}>
             <Text style={styles.itemLabel}>{item.title}</Text>
             <IconComponent
@@ -87,6 +88,7 @@ export default function Home({navigation}){
     const [index, setIndex] = useState(1);
 
     return (
+      
         <View style = {styles.container}>
             <Carousel
                 ref={(c) => this.carousel = c}

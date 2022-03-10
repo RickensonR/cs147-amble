@@ -6,7 +6,7 @@ import {globalStyles} from '../styles/global';
 
 function Supplies(props) {
   return (
-    <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
+    // <ImageBackground source = {require("../screens/background.jpg") }style = {styles.container}> 
   <View style={styles.container}>
       <View style={styles.rect13}>
         <View style={styles.rect11Row}>
@@ -86,13 +86,14 @@ function Supplies(props) {
       </View>
       <Text style={styles.whatWeRecommend}>what we recommend...</Text>
     </View>
-    </ImageBackground>
+    // </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#fff"
   },
   rect13: {
     width: 295,
