@@ -5,6 +5,9 @@ import Carousel from 'react-native-snap-carousel';
 import { scrollInterpolator, animatedStyles } from './animations';
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import {FAB, List} from "react-native-paper";
+import BottomTab from './BottomTab';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 const SLIDER_WIDTH = Dimensions.get('window').width;
@@ -56,53 +59,64 @@ const components = {
 export default function Home({navigation}){
 
 
-    //navigation button handler
-    const pressHandler = () => {
-        navigation.navigate('Paint')
+    // //navigation button handler
+    // const pressHandler = () => {
+    //     navigation.navigate('Paint')
 
 
-    }
+    // }
 
-    const _renderItem = ({ item }) => {
-        const IconComponent = components[item.source];
-        return (
+    // const _renderItem = ({ item }) => {
+    //     const IconComponent = components[item.source];
+    //     return (
 
-          <TouchableOpacity onPress = {() => navigation.navigate('Paint',item )} style={styles.itemContainer}>
-            <Text style={styles.itemLabel}>{item.title}</Text>
-            <IconComponent
-                    name={item.icon}
-                    style={styles.icon6}
-            ></IconComponent>
-            <Text style={styles.itemCompletion}>{item.completion} completed</Text>
-          </TouchableOpacity>
-        );
-    }
+    //       <TouchableOpacity onPress = {() => navigation.navigate('Paint',item )} style={styles.itemContainer}>
+    //         <Text style={styles.itemLabel}>{item.title}</Text>
+    //         <IconComponent
+    //                 name={item.icon}
+    //                 style={styles.icon6}
+    //         ></IconComponent>
+    //         <Text style={styles.itemCompletion}>{item.completion} completed</Text>
+    //       </TouchableOpacity>
+    //     );
+    // }
 
-    const [activities, setActivity] = useState([
-        {title: "Paint", body: "Here are some instructions on how to paint"},
-        {title: "Cook", body: "Here are some instructions on how to cook"}
+    // const [activities, setActivity] = useState([
+    //     {title: "Paint", body: "Here are some instructions on how to paint"},
+    //     {title: "Cook", body: "Here are some instructions on how to cook"}
 
 
-    ]);
+    // ]);
 
-    const [index, setIndex] = useState(1);
+    //const [index, setIndex] = useState(1);
 
     return (
       
         <View style = {styles.container}>
-            <Carousel
-                ref={(c) => this.carousel = c}
-                data={data}
-                renderItem={_renderItem}
-                sliderWidth={SLIDER_WIDTH}
-                itemWidth={ITEM_WIDTH}
-                containerCustomStyle={styles.carouselContainer}
-                inactiveSlideShift={0}
-                onSnapToItem={(index) => setIndex({ index })}
-                scrollInterpolator={scrollInterpolator}
-                slideInterpolatedStyle={animatedStyles}
-                useScrollView={true}
-        />
+            <BottomTab />
+         
+
+         {/* <FAB
+                small
+                icon = 'plus'
+                label = 'Add new note'
+                onPress = {()=> navigation.navigate("ViewNotes" )}
+
+            />
+             <FAB
+                small
+                icon = 'plus'
+                label = 'Add new note'
+                onPress = {()=> navigation.navigate("Home" )}
+
+            />
+             <FAB
+                small
+                icon = 'plus'
+                label = 'Add new note'
+                onPress = {()=> navigation.navigate("ForYou" )}
+
+            /> */}
            
         </View>
    )

@@ -16,7 +16,7 @@ export default function ViewNotes({navigation}){
         <View style = {styles.container}>
             {notes.length ===0 ?(
                   <View style = {styles.titleContainer}>
-                  <Text style = {styles.title}>You have no notes</Text>
+                  <Text style = {styles.title}>No pending DAHAs</Text>
   
               </View>
 
@@ -26,7 +26,7 @@ export default function ViewNotes({navigation}){
                             data={notes}
                             renderItem={({ item }) => (
                                 <List.Item
-                                    left={props => <List.Icon {...props} icon="lead-pencil" color = "black" />}
+                                    // left={props => <List.Icon {...props} icon="lead-pencil" color = "black" />}
                                     title={item.noteTitle}
                                     description={item.noteDescription}
                                     descriptionNumberOfLines={1}
@@ -56,7 +56,7 @@ export default function ViewNotes({navigation}){
                 style = {styles.fab}
                 small
                 icon = 'plus'
-                label = 'Add new note'
+                label = 'Make a request'
                 onPress = {()=> navigation.navigate("AddNotes", {addNotes} )}
 
             />
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     fab:{
-        backgroundColor: "#ADD8E6",
+        backgroundColor: "#DB753C",
         position: "absolute",
         margin: 20,
         right: 0,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
             justifyContent:'center',
             width:"100%",
             height:75,
-            backgroundColor:'#ADD8E6',
+            backgroundColor:'white',
             borderRadius:10,
             paddingVertical: 20,
             paddingBottom:20,

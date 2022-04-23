@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
     },
     title: {
         height: 75,
-        backgroundColor: "#FDF074",
+        backgroundColor: "#DB753C",
         fontSize: 24,
         marginBottom: 16,
         fontWeight: "bold"
     },
     text: {
-        backgroundColor: "#ADD8E6",
+        backgroundColor: "#fdf7f6",
         height: 600,
         fontSize: 16,
         fontWeight: "bold"
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         margin: 20,
         right: 0,
         bottom: 0,
-        backgroundColor: '#ADD8E6'
+        backgroundColor: '#fdf7f6'
     }
 
 })
